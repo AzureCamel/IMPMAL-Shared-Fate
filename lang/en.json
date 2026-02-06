@@ -1,0 +1,87 @@
+{
+    "IMPMAL_SHARED_FATE": {
+        "FatePoints": "Fate Points",
+        "RuinPoints": "Ruin",
+        
+        "Settings": {
+            "GMRuin": {
+                "Name": "GM Ruin (Current)",
+                "Hint": "Current Ruin points available to the GM"
+            },
+            "GMRuinMax": {
+                "Name": "GM Ruin Maximum",
+                "Hint": "Maximum Ruin points the GM can have"
+            },
+            "ShowMaxFate": {
+                "Name": "Show Maximum Values",
+                "Hint": "Display the maximum points alongside the current value (e.g., 2/3 instead of just 2)"
+            },
+            "AllowPlayerUse": {
+                "Name": "Allow Player Fate Use",
+                "Hint": "Allow players to spend their own fate points directly from the player list interface"
+            },
+            "ShowChatMessages": {
+                "Name": "Show Chat Messages",
+                "Hint": "Display a chat message when fate or ruin points are used"
+            },
+            "LogLevel": {
+                "Name": "Log Level",
+                "Hint": "Set the verbosity of console logging for debugging",
+                "None": "None",
+                "Error": "Errors Only",
+                "Warn": "Warnings",
+                "Info": "Info",
+                "Debug": "Debug (Verbose)"
+            }
+        },
+        
+        "Tooltip": {
+            "FatePoints": "{characterName}: {current}/{max} Fate",
+            "RuinPoints": "Ruin: {current}/{max}",
+            "ClickToUse": "Click to use a Fate point",
+            "ClickToUseRuin": "Click to use a Ruin point",
+            "CtrlClickToAdd": "Ctrl+Click to add Fate",
+            "CtrlRightClickToRemove": "Ctrl+Right-Click to remove Fate",
+            "CtrlClickToAddRuin": "Ctrl+Click to add Ruin",
+            "CtrlRightClickToRemoveRuin": "Ctrl+Right-Click to remove Ruin"
+        },
+        
+        "Controls": {
+            "AddFate": "Add Fate Point",
+            "RemoveFate": "Remove Fate Point",
+            "AddRuin": "Add Ruin Point",
+            "RemoveRuin": "Remove Ruin Point"
+        },
+        
+        "Dialog": {
+            "UseFateTitle": "Use Fate Point",
+            "UseFateContent": "<p>Spend a Fate point for <strong>{characterName}</strong>?</p><p>Fate points can be used to add +1 SL to a test or to avoid death.</p>",
+            "UseRuinTitle": "Use Ruin Point",
+            "UseRuinContent": "<p>Spend a Ruin point?</p><p>Ruin represents the GM's pool of narrative influence.</p>",
+            "Confirm": "Use Fate",
+            "ConfirmRuin": "Use Ruin",
+            "Cancel": "Cancel"
+        },
+        
+        "Chat": {
+            "UsedFate": "<strong>{characterName}</strong> spends a Fate point! ({remaining}/{max} remaining)",
+            "AddedFate": "<strong>{characterName}</strong> gains a Fate point! ({current}/{max})",
+            "RemovedFate": "<strong>{characterName}</strong> loses a Fate point. ({current}/{max} remaining)",
+            "FateIncreased": "<strong>{characterName}</strong> gained {amount} Fate! ({newValue}/{max})",
+            "FateDecreased": "<strong>{characterName}</strong> lost {amount} Fate. ({newValue}/{max} remaining)",
+            "UsedRuin": "The GM spends a <strong>Ruin</strong> point! ({remaining}/{max} remaining)",
+            "AddedRuin": "The GM gains a <strong>Ruin</strong> point! ({current}/{max})",
+            "RemovedRuin": "The GM loses a <strong>Ruin</strong> point. ({current}/{max} remaining)"
+        },
+        
+        "Notifications": {
+            "CannotUseFate": "You cannot use fate points for this character.",
+            "NoCharacter": "No character found for this user.",
+            "InsufficientFate": "Not enough fate points available.",
+            "InsufficientRuin": "Not enough Ruin points available.",
+            "NoFateData": "Could not find fate point data for this character.",
+            "UpdateFailed": "Failed to update points.",
+            "GMOnly": "Only the GM can perform this action."
+        }
+    }
+}

@@ -1,0 +1,295 @@
+/* Imperium Maledictum Shared Fate Styles */
+
+/* Base Fate/Ruin Container in Player List */
+.impmal-fate-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 8px;
+    padding: 2px 6px;
+    background: rgba(30, 30, 40, 0.8);
+    border: 1px solid #444;
+    border-radius: 4px;
+    font-size: 12px;
+    vertical-align: middle;
+    transition: all 0.2s ease;
+}
+
+.impmal-fate-container:hover {
+    background: rgba(50, 50, 60, 0.9);
+    border-color: #666;
+}
+
+.impmal-fate-container.interactive {
+    cursor: pointer;
+}
+
+/* ========================================
+   FATE STYLING (Blue - for Players)
+   ======================================== */
+
+.impmal-fate-container.fate-container.interactive:hover {
+    background: rgba(60, 60, 80, 0.95);
+    border-color: #8888dd;
+    box-shadow: 0 0 5px rgba(100, 100, 200, 0.3);
+}
+
+/* Fate Icon */
+.impmal-fate-container.fate-container .fate-icon {
+    width: 16px;
+    height: 16px;
+    border: none;
+    filter: drop-shadow(0 0 2px rgba(100, 150, 255, 0.5));
+}
+
+/* Fate Value Display */
+.impmal-fate-container.fate-container .fate-value {
+    color: #ddd;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Fate Exhausted State (0 fate) */
+.impmal-fate-container.fate-container.exhausted {
+    opacity: 0.6;
+    background: rgba(40, 40, 50, 0.8);
+    border-color: #555;
+}
+
+.impmal-fate-container.fate-container.exhausted .fate-icon {
+    filter: grayscale(100%) brightness(0.7);
+}
+
+.impmal-fate-container.fate-container.exhausted .fate-value {
+    color: #888;
+}
+
+/* Fate Full State (max fate) */
+.impmal-fate-container.fate-container.full {
+    background: rgba(20, 30, 50, 0.9);
+    border-color: #468;
+}
+
+.impmal-fate-container.fate-container.full .fate-icon {
+    filter: drop-shadow(0 0 4px rgba(100, 180, 255, 0.7));
+}
+
+.impmal-fate-container.fate-container.full .fate-value {
+    color: #8cf;
+}
+
+/* ========================================
+   RUIN STYLING (Red - for GM)
+   ======================================== */
+
+.impmal-fate-container.ruin-container {
+    background: rgba(50, 20, 20, 0.85);
+    border-color: #633;
+}
+
+.impmal-fate-container.ruin-container:hover {
+    background: rgba(70, 30, 30, 0.9);
+    border-color: #844;
+}
+
+.impmal-fate-container.ruin-container.interactive:hover {
+    background: rgba(80, 35, 35, 0.95);
+    border-color: #a55;
+    box-shadow: 0 0 5px rgba(200, 50, 50, 0.4);
+}
+
+/* Ruin Icon */
+.impmal-fate-container.ruin-container .ruin-icon {
+    color: #c44;
+    font-size: 14px;
+    filter: drop-shadow(0 0 2px rgba(200, 50, 50, 0.5));
+}
+
+/* Ruin Value Display */
+.impmal-fate-container.ruin-container .ruin-value {
+    color: #e88;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Ruin Exhausted State (0 ruin) */
+.impmal-fate-container.ruin-container.exhausted {
+    opacity: 0.6;
+    background: rgba(40, 25, 25, 0.8);
+    border-color: #533;
+}
+
+.impmal-fate-container.ruin-container.exhausted .ruin-icon {
+    color: #866;
+    filter: none;
+}
+
+.impmal-fate-container.ruin-container.exhausted .ruin-value {
+    color: #866;
+}
+
+/* Ruin Full State (max ruin) */
+.impmal-fate-container.ruin-container.full {
+    background: rgba(60, 20, 20, 0.95);
+    border-color: #944;
+    box-shadow: 0 0 8px rgba(180, 40, 40, 0.3);
+}
+
+.impmal-fate-container.ruin-container.full .ruin-icon {
+    color: #f66;
+    filter: drop-shadow(0 0 4px rgba(255, 80, 80, 0.7));
+    animation: ruin-pulse 2s ease-in-out infinite;
+}
+
+.impmal-fate-container.ruin-container.full .ruin-value {
+    color: #f88;
+}
+
+@keyframes ruin-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* ========================================
+   GM CONTROLS
+   ======================================== */
+
+.impmal-fate-container .fate-gm-controls {
+    display: none;
+    margin-left: 4px;
+    gap: 2px;
+}
+
+.impmal-fate-container:hover .fate-gm-controls {
+    display: inline-flex;
+}
+
+.impmal-fate-container .fate-control {
+    width: 14px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(60, 60, 70, 0.9);
+    border: 1px solid #555;
+    border-radius: 3px;
+    color: #aaa;
+    font-size: 10px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.impmal-fate-container .fate-control:hover {
+    background: rgba(80, 80, 100, 1);
+    border-color: #777;
+    color: #fff;
+}
+
+/* Fate Add/Remove buttons */
+.impmal-fate-container.fate-container .fate-add:hover {
+    background: rgba(40, 80, 40, 1);
+    border-color: #6a6;
+    color: #afa;
+}
+
+.impmal-fate-container.fate-container .fate-remove:hover {
+    background: rgba(80, 40, 40, 1);
+    border-color: #a66;
+    color: #faa;
+}
+
+/* Ruin Add/Remove buttons */
+.impmal-fate-container.ruin-container .ruin-add:hover {
+    background: rgba(100, 30, 30, 1);
+    border-color: #a44;
+    color: #fcc;
+}
+
+.impmal-fate-container.ruin-container .ruin-remove:hover {
+    background: rgba(50, 50, 50, 1);
+    border-color: #777;
+    color: #ccc;
+}
+
+/* ========================================
+   CHAT MESSAGE STYLES
+   ======================================== */
+
+.impmal-shared-fate-message {
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Fate Chat Message (Blue) */
+.impmal-shared-fate-message.fate-message {
+    background: linear-gradient(135deg, rgba(40, 50, 70, 0.9) 0%, rgba(30, 35, 50, 0.95) 100%);
+    border: 1px solid #456;
+    color: #cde;
+}
+
+.impmal-shared-fate-message.fate-message::before {
+    content: "⚜ ";
+    color: #8af;
+}
+
+.impmal-shared-fate-message.fate-message::after {
+    content: " ⚜";
+    color: #8af;
+}
+
+/* Ruin Chat Message (Red) */
+.impmal-shared-fate-message.ruin-message {
+    background: linear-gradient(135deg, rgba(70, 30, 30, 0.9) 0%, rgba(50, 20, 20, 0.95) 100%);
+    border: 1px solid #744;
+    color: #ecc;
+}
+
+.impmal-shared-fate-message.ruin-message::before {
+    content: "☠ ";
+    color: #f66;
+}
+
+.impmal-shared-fate-message.ruin-message::after {
+    content: " ☠";
+    color: #f66;
+}
+
+/* ========================================
+   PLAYER LIST ADJUSTMENTS
+   ======================================== */
+
+#players .player {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#players .player .impmal-fate-container {
+    order: 1;
+}
+
+/* Responsive adjustments for narrow player lists */
+@media (max-width: 250px) {
+    .impmal-fate-container {
+        padding: 1px 4px;
+        margin-left: 4px;
+    }
+    
+    .impmal-fate-container .fate-icon,
+    .impmal-fate-container .ruin-icon {
+        width: 14px;
+        height: 14px;
+        font-size: 12px;
+    }
+    
+    .impmal-fate-container .fate-value,
+    .impmal-fate-container .ruin-value {
+        font-size: 11px;
+    }
+}
