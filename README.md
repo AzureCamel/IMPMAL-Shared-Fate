@@ -107,21 +107,3 @@ This module is designed specifically for the Imperium Maledictum system and read
 ## License
 
 MIT License - See LICENSE file for details
-
-## Version History
-
-### 1.0.1
-- GM now has independent Ruin pool (not linked to any character)
-- Ruin displayed with red styling and skull icon
-- Fixed chat messages for removing Fate
-- Added chat messages for Ruin operations
-- Configurable maximum Ruin in settings
-
-### 1.0.0
-- Initial release
-- Fate point display in player list
-- Bidirectional synchronization with character sheets
-- GM controls for adding/removing Fate
-- Player Fate usage with confirmation
-- Chat message integration
-- Configurable settings
